@@ -1,0 +1,52 @@
+{
+  "signatures": 2568,
+  "signature_goal": 3000,
+  "mission_heading": "Our mission",
+  "mission": "<p>Riverside Park has hosted our markets, our kids' football and our summer nights for fifty years. A developer has offered the council a quick payday to build on it.</p><p>The council votes in March. A petition with thousands of local names is the clearest message councillors can get, and it shows them how many voters are watching.</p><p>Add your name, then share this page with three neighbours. Every signature counts.</p>",
+  "stats_heading": "Why it matters",
+  "stats": [
+    {
+      "icon": "leaf",
+      "number": "42 acres",
+      "label": "of public green space",
+      "text": "The largest park within walking distance for 30,000 residents."
+    },
+    {
+      "icon": "clock",
+      "number": "50 years",
+      "label": "of community use",
+      "text": "Markets, festivals, sports leagues and school trips since 1976."
+    },
+    {
+      "icon": "gavel",
+      "number": "1 vote",
+      "label": "decides its future",
+      "text": "The council votes in March. Councillors read every petition."
+    }
+  ],
+  "donate_heading": "Help us win the vote",
+  "donate_text": "Signing is the first step. A donation pays for the flyers, ads and organisers that turn signatures into a win.",
+  "actions": [
+    {
+      "label": "Add your name",
+      "title": "Sign the petition to stop the sale",
+      "link": "#petition"
+    },
+    {
+      "label": "Chip in",
+      "title": "Fund leaflets, legal advice and organisers",
+      "link": "#donate"
+    },
+    {
+      "label": "Show up",
+      "title": "Pack the public gallery at the council vote in March",
+      "link": "/updates/"
+    },
+    {
+      "label": "Spread the word",
+      "title": "Share the campaign with three neighbours",
+      "link": "#share"
+    }
+  ],
+  "actions_heading": "Four ways to save the park"
+}

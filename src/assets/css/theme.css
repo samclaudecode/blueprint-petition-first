@@ -1,0 +1,21 @@
+/* Petition First ("Manifesto"): a highlight-tinted photo behind a huge statement, with the petition card stamped on top. */
+.pf-hero { position: relative; padding: 72px 0 88px; background: var(--accent); border-bottom: 2px solid var(--ink); }
+.pf-bg { position: absolute; inset: 0; min-height: 0; background: var(--accent); }
+.photos-duotone .pf-bg::after { opacity: 1; }
+.pf-bg .photo { opacity: .55; }
+.pf-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(320px, 440px); gap: 56px; align-items: center; }
+.pf-copy h1 { font-size: clamp(3rem, 8vw, 6.6rem); line-height: 1.04; }
+.pf-copy .mark { background: var(--ink); color: var(--accent); padding: 0 .12em; }
+.pf-copy .lead { max-width: 34em; font-weight: 500; }
+.pf-copy .progress-bar { background: rgba(0,0,0,.12); max-width: 480px; }
+.pf-copy .progress-bar span { background: var(--ink); box-shadow: none; }
+.pf-form { transform: rotate(1.2deg); }
+.pf-form .ph-title { margin-bottom: 4px; }
+.pf-accent { color: var(--accent); }
+.pf-mission p { color: rgba(255,255,255,.88); font-size: 1.25rem; line-height: 1.55; }
+.pf-mission p:first-child { font-family: var(--font-head); font-weight: var(--head-weight); font-stretch: var(--head-stretch); letter-spacing: var(--head-track); font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; color: #fff; }
+.pf-stats { display: grid; gap: 28px; }
+.pf-stats .stat { border-top-color: var(--accent); }
+.pf-stats .stat-num { color: var(--accent); }
+.ink .share a:hover { border-color: var(--accent); }
+@media (max-width: 880px) { .pf-grid { grid-template-columns: 1fr; gap: 36px; } .pf-form { transform: none; } }

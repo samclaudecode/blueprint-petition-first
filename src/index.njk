@@ -1,0 +1,68 @@
+---
+layout: base.njk
+title: Home
+---
+{% set pct = ((home.signatures / home.signature_goal) * 100) | round if home.signature_goal else 0 %}
+<section class="pf-hero">
+  {% set src = site.hero.image %}{% set cls = "pf-bg duo-light" %}{% include "photo.njk" %}
+  <div class="wrap pf-grid">
+    <div class="pf-copy">
+      <h1>{{ site.hero.headline | mark(site.hero.highlight) | safe }}</h1>
+      <p class="lead">{{ site.hero.subheadline }}</p>
+      {% if home.signatures %}
+      <div class="progress">
+        <p class="progress-title">{{ home.signatures | money }} people have signed</p>
+        <div class="progress-bar"><span style="width:{{ 100 if pct > 100 else pct }}%"></span></div>
+        {% if home.signature_goal %}<p class="progress-sub">Help us reach {{ home.signature_goal | money }} before the vote.</p>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+    <div id="petition" class="card-box pf-form">
+      <p class="ph-title">{{ site.petition.title }}</p>
+      {% set cfg = site.petition %}{% include "embed.njk" %}
+    </div>
+  </div>
+</section>
+
+{% if home.actions | length %}
+<section>
+  <div class="wrap">
+    <h2>{{ home.actions_heading }}</h2>
+    {% set actions = home.actions %}{% include "actions.njk" %}
+  </div>
+</section>
+{% endif %}
+
+<section class="ink">
+  <div class="wrap with-aside">
+    <div>
+      <p class="eyebrow pf-accent">{{ home.mission_heading }}</p>
+      <div class="prose pf-mission">{{ home.mission | safe }}</div>
+      <div id="share">{% include "share.njk" %}</div>
+    </div>
+    {% if home.stats | length %}
+    <div class="pf-stats">
+      {% for s in home.stats %}
+        <div class="stat"><p class="stat-num">{{ s.number }}</p><h3>{{ s.label }}</h3>{% if s.text %}<p>{{ s.text }}</p>{% endif %}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<section id="donate" class="soft">
+  <div class="wrap with-aside">
+    <div>
+      <h2>{{ home.donate_heading | mark(site.hero.highlight) | safe }}</h2>
+      <p class="lead">{{ home.donate_text }}</p>
+    </div>
+    <div class="card-box">
+      <p class="ph-title">{{ site.donate.title }}</p>
+      {% set cfg = site.donate %}{% include "embed.njk" %}
+    </div>
+  </div>
+</section>
+
+{% include "cta-band.njk" %}
+
+{% include "latest-updates.njk" %}
